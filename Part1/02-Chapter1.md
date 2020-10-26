@@ -41,6 +41,32 @@ Software by contrast is the oppostite.
 # Scalability
 When making a feature we typically ask "Can it scale to our current load?"  What we should ask is "Can it scale to the load when it's done?"
 
-# Describing Load
+# Describing Load and Performance
 11 - Load parameters, why are they different for every system?
 An example on 18 is 100,000 RP`S` of 1k vs 3 RP`M` of 2GB, have the same throughput, but wildly different loads on the system.
+
+I would argue that most of the time you want to reach for P95 or higher.
+
+15 - The reasoning is described here.  Typically the users with the slowest experiance are the ones with the most data.  They also tend to be the ones spending the most.
+
+16 - also be ware of meaningless math.
+
+# Approaches for Coping with Load
+18 - Warning about 1 tool to rule them all
+
+18 - "it's usually more important to be able to iterate quickly... than it is to scale" 
+
+# Operability: Making Life Easy for Operations
+19 "good operations can often work around the limitations of bad (or incomplete) software, but good software cannot run reliably with bad operations" - Best quote of the book
+
+# Simplicity: Managing Complexity
+20 - "complexity slows down everyone who needs to work on the system" We should design to remove that complexity
+
+21 - Symptoms of complexity, and possible soltuions:
+- "explosion of state space" - stateless services
+- "tight coupling of modules" - micro services
+- "inconsistent naming and terminology" - Domain Driven Design (DDD)
+
+21 - accidental complexity, everything I touch.
+
+21 - "finding good abstractions is very hard", and finding bad ones means you made the system more complex not less.
